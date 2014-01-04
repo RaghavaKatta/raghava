@@ -1,0 +1,37 @@
+<h1>Listing logins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Userid</th>
+      <th>Dob</th>
+      <th>Cell</th>
+      <th>Gender</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logins.each do |login| %>
+      <tr>
+        <td><%= login.name %></td>
+        <td><%= login.userid %></td>
+        <td><%= login.dob %></td>
+        <td><%= login.cell %></td>
+        <td><%= login.gender %></td>
+        <td><%= login.address %></td>
+        <td><%= link_to 'Show', login %></td>
+        <td><%= link_to 'Edit', edit_login_path(login) %></td>
+        <td><%= link_to 'Destroy', login, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Login', new_login_path %>
