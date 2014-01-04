@@ -6,7 +6,7 @@ Raghava::Application.routes.draw do
 
  # get "home/AboutUs"
  # get "home/OverView"
-  #get "home/ContactUs"
+  get "home/ContactUs"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
